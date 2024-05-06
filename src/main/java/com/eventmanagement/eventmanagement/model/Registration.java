@@ -22,7 +22,7 @@ public class Registration {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer registration_id;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

@@ -1,6 +1,8 @@
 package com.eventmanagement.eventmanagement.model;
 import java.util.*;
-import org.hibernate.annotations.ManyToAny;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -24,7 +26,7 @@ public class User extends Person {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    protected Integer id;
+    protected Integer user_id;
     @Column(name="password")
     @NotEmpty
     private String password;
@@ -49,7 +51,7 @@ public class User extends Person {
 
     public User(String firstName, String lastName, String email, Integer age, Integer id, String password, String bio, boolean enabled, Role role) {
         super(firstName, lastName, email, age);
-        this.id = id;
+        this.user_id = id;
         this.password = password;
         this.bio = bio;
         this.enabled = enabled;

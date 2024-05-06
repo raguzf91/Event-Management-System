@@ -32,7 +32,7 @@ public class Event {
     
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    protected Integer id;
+    protected Integer event_id;
 
     @NotEmpty
     @Column(name="title")

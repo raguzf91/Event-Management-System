@@ -18,7 +18,7 @@ public class Review {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    protected Integer id;
+    protected Integer review_id;
 
     @Column(name="description")
     private String description;
