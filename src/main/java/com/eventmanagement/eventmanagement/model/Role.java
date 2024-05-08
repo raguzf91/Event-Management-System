@@ -1,5 +1,7 @@
 package com.eventmanagement.eventmanagement.model;
 
+import com.eventmanagement.eventmanagement.enums.RoleType;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,6 +26,6 @@ public class Role {
     
     @Column(name="name")
     @NotEmpty
-    private String name;
+    private RoleType name;
     
 }
